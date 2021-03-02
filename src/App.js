@@ -1,10 +1,14 @@
+import { Container, Header } from 'semantic-ui-react';
+import Player from './component/Player';
+
 const App = () => {
-  const p = 'Youli React Redux';
+  const title = 'Game No.24';
 
   return (
-    <p>
-      {p}
-    </p>
+    <Container fluid>
+      <Header as="h1">{title}</Header>
+      <Player />
+    </Container>
   );
 };
 
