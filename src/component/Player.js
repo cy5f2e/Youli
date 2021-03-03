@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Table } from 'semantic-ui-react';
+import { PLAYER_DELETE } from '../actions/PlayerActions';
 import AddPlayer from './AddPlayer';
 
 const Player = () => {
@@ -8,23 +9,23 @@ const Player = () => {
   const allPlayers = useSelector((state) => state.players);
   const [add, setAdd] = useState(false);
 
-  const handleDelete = (id) => {
+  function handleDelete(id) {
     dispatch({
-      type: 'PLAYER_DELETE',
+      type: PLAYER_DELETE,
       payload: {
         id: id,
       },
     });
-  };
+  }
 
-  const handleClose = () => {
+  function handleClose() {
     setAdd(false);
-  };
+  }
 
   return (
     <>
       <Button
-        content="增加球員成績"
+        content="Add Player Score"
         primary
         onClick={() => setAdd(!add)}
       />
@@ -36,9 +37,9 @@ const Player = () => {
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell content="ID" negative />
-                <Table.HeaderCell content="姓名" />
+                <Table.HeaderCell content="Name" />
                 <Table.HeaderCell content="PTS" />
-                <Table.HeaderCell content="操作" />
+                <Table.HeaderCell content="Action" />
               </Table.Row>
             </Table.Header>
             <Table.Body>
@@ -49,7 +50,7 @@ const Player = () => {
                   <Table.Cell content={d.points} />
                   <Table.Cell>
                     <Button
-                      content="刪除"
+                      content="Delete"
                       color="red"
                       onClick={() => handleDelete(d.id)}
                     />

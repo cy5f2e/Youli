@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Segment } from 'semantic-ui-react';
+import { PLAYER_ADD } from '../actions/PlayerActions';
 
 const AddPlayer = ({ onClose }) => {
   const dispatch = useDispatch();
   const [data, setData] = useState([]);
 
-  const handleChange = (ev, { name, value }) => {
+  function handleChange(ev, { name, value }) {
     setData((prev) => ({
       ...prev,
       [name]: value,
     }));
-  };
+  }
 
-  const handleAddPlayer = () => {
+  function handleAddPlayer() {
     const { name, points } = data;
 
     if (name === undefined || points === undefined) {
@@ -21,7 +22,7 @@ const AddPlayer = ({ onClose }) => {
     }
 
     dispatch({
-      type: 'PLAYER_ADD',
+      type: PLAYER_ADD,
       payload: {
         name: name,
         points: points,
@@ -29,23 +30,23 @@ const AddPlayer = ({ onClose }) => {
     });
 
     setTimeout(() => onClose(), 500)
-  };
+  }
 
   return (
     <Segment>
       <Form size="small">
         <Form.Input
-          label="姓名"
+          label="Name"
           name="name"
           onChange={handleChange}
         />
         <Form.Input
-          label="得分"
+          label="Score"
           name="points"
           onChange={handleChange}
         />
         <Form.Button
-          content="送出"
+          content="Submit"
           color="green"
           onClick={handleAddPlayer}
         />
