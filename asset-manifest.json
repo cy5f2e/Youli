@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Youli/static/css/main.214d09d3.chunk.css",
+    "main.js": "/Youli/static/js/main.b685e63a.chunk.js",
+    "main.js.map": "/Youli/static/js/main.b685e63a.chunk.js.map",
+    "runtime-main.js": "/Youli/static/js/runtime-main.5784f054.js",
+    "runtime-main.js.map": "/Youli/static/js/runtime-main.5784f054.js.map",
+    "static/js/2.520b5919.chunk.js": "/Youli/static/js/2.520b5919.chunk.js",
+    "static/js/2.520b5919.chunk.js.map": "/Youli/static/js/2.520b5919.chunk.js.map",
+    "static/js/3.5119f4da.chunk.js": "/Youli/static/js/3.5119f4da.chunk.js",
+    "static/js/3.5119f4da.chunk.js.map": "/Youli/static/js/3.5119f4da.chunk.js.map",
+    "index.html": "/Youli/index.html",
+    "static/css/main.214d09d3.chunk.css.map": "/Youli/static/css/main.214d09d3.chunk.css.map",
+    "static/js/2.520b5919.chunk.js.LICENSE.txt": "/Youli/static/js/2.520b5919.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5784f054.js",
+    "static/js/2.520b5919.chunk.js",
+    "static/css/main.214d09d3.chunk.css",
+    "static/js/main.b685e63a.chunk.js"
+  ]
+}
